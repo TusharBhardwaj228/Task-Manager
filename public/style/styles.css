@@ -75,5 +75,11 @@
   background-color: black;
   border: none;
   border-radius: 1rem;
+}
+.registration-form{
+  height:550px;
+}
+a{
+  text-decoration: none;
   color: #fff;
 }
