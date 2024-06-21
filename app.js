@@ -6,6 +6,7 @@ const routers = require('./routes/main.js');
 const dbConnect = require('./db/db-connect.js');
 const wrongroute = require('./middlewares/wrongroute.js');
 
+app.use(express.static('./public'));
 app.use(express.json());
 app.use('/Homepage',routers);
 app.use(wrongroute);
