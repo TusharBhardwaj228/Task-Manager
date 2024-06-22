@@ -8,7 +8,7 @@ const wrongroute = require('./middlewares/wrongroute.js');
 
 app.use(express.static('./public'));
 app.use(express.json());
-app.use('/Homepage',routers);
+app.use('/homepage',routers);
 app.use(wrongroute);
 const port = process.env.PORT || 5000;
 async function main(){

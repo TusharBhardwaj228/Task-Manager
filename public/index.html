@@ -4,27 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>Registration</title>
+  <title>Task Manager</title>
 </head>
 <body>
   <div class="container">
-    <div class="login-form registration-form">
-      <div class="login-txt registration-txt">Registration</div>
-      <input class="login-input registration-input js-name" type="text" name="name" placeholder="Enter Name">
-      <input class="login-input registration-input js-contactNumber" type="tel" name="contact-number" placeholder="Enter Contact Number">
-      <input class="login-input registration-input js-username" type="text" name="username" placeholder="Create Username">
-      <input class="login-input registration-input js-emailid" type="email" name="Email Id" placeholder="Enter Email Id">
-      <input class="login-input registration-input js-password" type="password" name="Password" placeholder="Create New Password">
+    <div class="login-form">
+      <div class="login-txt">Login</div>
+      <input class="login-input js-username" type="text" name="Username" placeholder="Enter Username">
+      <div class="js-username-error error"></div>
+      <input class="login-input js-password" type="text" name="Password" placeholder="Enter Password">
+      <div class="js-password-error error"></div>
       <div class="btn-div">
-        <button class="login-button register-button js-register-btn">Register</button>
+        <button class="login-button js-login-btn">Login</button>
       </div>
       <div class="good-rslt js-good-rslt"></div>
     </div>
-     <div class="register login">
-      <div>Already Registered?</div>
-      <button class="register-btn login-btn"><a href="index.html">Login</a></button>
+    <div class="register">
+      <div>Not Registered?</div>
+      <button class="register-btn"><a href="registration.html">Register</a></button>
     </div>
   </div>
-  <script src="index.js"></script>
+  <script src="login.js"></script>
 </body>
 </html>

@@ -33,5 +33,19 @@ dbSchema.pre('save', async function(next){
   next();
 });
 
+dbSchema.statics.login = async function(username, password){
+  const user = await this.findOne({username});
+  if(user){
+    const auth = await bcrypt.compare(password, user.password);
+    if(auth){
+      return user;
+    }
+    throw Error("Invalid password");
+  }
+
+  throw Error("Invalid username");
+  
+}
+
 const TaskManager = mongoose.model("TaskManager",dbSchema);
 module.exports = TaskManager;
